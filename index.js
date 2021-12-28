@@ -13,24 +13,35 @@ let chessAGToCor = (ag) => {
         switch (ag[0]) {
             case "a":
                 yCor = 0;
+                console.log(yCor);
+                break;
             case "b":
                 yCor = 1;
+                break;
             case "c":
                 yCor = 2;
+                break;
             case "d":
                 yCor = 3;
+                break;
             case "e":
                 yCor = 4;
+                break;
             case "f":
                 yCor = 5;
+                break;
             case "g":
                 yCor = 6;
+                break;
             case "h":
                 yCor = 7;
+                break;
         }
-        console.log(yCor);
         return new Coordinates_1.MapCor(xCor, yCor);
     }
+};
+let dividend = () => {
+    console.log("***************************************************************");
 };
 class GameController {
     constructor() {
@@ -38,13 +49,18 @@ class GameController {
     }
     move(from, to) {
         this.game.move(chessAGToCor(from), chessAGToCor(to));
+        this.render();
     }
     render() {
         this.game.renderBoard();
     }
 }
-// let game1 = new GameController();
-let game = new Board_1.ChessBoard();
-game.renderBoard();
-// game1.move("a2", "a3");
-// game1.render();
+let game1 = new GameController();
+game1.render();
+game1.move("e2", "e4");
+dividend();
+game1.move("e7", "e5");
+dividend();
+game1.move("g1", "g3");
+dividend();
+game1.move("g8", "g6");
