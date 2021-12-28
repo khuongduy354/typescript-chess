@@ -60,10 +60,12 @@ class GameController {
 let game1 = new GameController();
 
 game1.render();
+dividend();
+
 game1.move("e2", "e4");
 dividend();
 game1.move("e7", "e5");
 dividend();
-game1.move("g1", "g3");
+game1.move("g1", "f3");
 dividend();
-game1.move("g8", "g6");
+game1.move("g8", "f6");
